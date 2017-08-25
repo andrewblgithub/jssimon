@@ -9,6 +9,7 @@ var audioYellow = document.getElementById("audioYellow");
 var audioBlue = document.getElementById("audioBlue");
 var resetBtn = document.getElementById("reset");
 var strictBtn = document.getElementById("strict");
+var roundBtn = document.getElementById("round");
 var pattern = [];
 var currentPattern = [];
 var userPattern = [];
@@ -26,6 +27,7 @@ function reset() {
   roundCount = 1;
   makePattern();
   currentPattern = [];
+  roundBtn.innerHTML = "ROUND: " + roundCount;
   playPattern(1);
 }
 
@@ -77,6 +79,7 @@ function nextPlayFunc(nextNum) {
 
 function playPattern (num) {
   setTimeout(function () {
+    roundBtn.innerHTML = "ROUND: " + roundCount;
     var nextPlay = pattern[nextPlayFunc(num)];
     simonSays(nextPlay);
     currentPattern.push(nextPlay);
@@ -187,5 +190,9 @@ strictBtn.onclick = function(){
     strictToggle = 0;
     strictBtn.innerHTML = "STRICT MODE OFF";
   }
+  reset();
+};
+
+roundBtn.onclick = function(){
   reset();
 };
