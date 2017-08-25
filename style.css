@@ -1,0 +1,47 @@
+* {
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 500px;
+}
+.bg {
+  background-color: khaki;
+}
+.row {
+  background-color: whitesmoke;
+}
+.col {
+  border: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 100px;
+  cursor: pointer; cursor: hand;
+}
+.btn {
+  background: transparent;
+  color: whitesmoke;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  cursor: pointer; cursor: hand;
+}
+
+#boxGreen {
+  background-color: green;
+}
+#boxRed {
+  background-color: red;
+}
+#boxYellow {
+  background-color: yellow;
+}
+#boxBlue {
+  background-color: blue;
+}
+.btn:hover {
+  color: lightgray;
+}
